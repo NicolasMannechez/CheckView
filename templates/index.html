@@ -1,0 +1,8 @@
+{{ greatings }} <br/>
+
+
+{% for document in documents %}
+{% if document.date %}
+{{document.docfile}} <br/>
+{% endif %}
+{% endfor %}

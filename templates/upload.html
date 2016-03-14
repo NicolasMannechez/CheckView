@@ -1,0 +1,6 @@
+<form action="../upload_file/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Please specify a file, or a set of files:<br>
+    <input type="file" name="datafile" size="40">
+    <input type="submit" value="Submit" />
+</form>

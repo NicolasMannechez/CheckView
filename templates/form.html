@@ -1,0 +1,17 @@
+<form action="../formular/" method="post">
+ {% csrf_token %}
+Granularité :<br>
+    <input type="radio" name="group1" value="AD" checked> AD<br>
+    <input type="radio" name="group1" value="Placement" > Placement<br>
+    <input type="radio" name="group1" value="Campaign"> Campaign
+<br>
+    <input type="date" name="date_debut"><input type="date" name="date_fin"><bR>
+<select name="meta">
+       {% for document in documents %}
+<option value="{{document.id}}">{{document.docfile}}<br>
+       {% endfor %}
+    </select><br>
+    <INPUT type="checkbox" name="cross" value="1">Cross Selling<br>
+    <INPUT type="checkbox" name="certified" value="1">Certified conversion<br>
+    <input type="submit" value="Submit">
+</form>
